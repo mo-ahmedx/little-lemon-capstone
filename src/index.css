@@ -1,0 +1,18 @@
+/* nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav > ul {
+    display: flex;
+}
+
+nav > ul > li {
+    list-style-type: none;
+}
+
+nav > ul > li > a {
+
+} */
+
+@import "tailwindcss";
