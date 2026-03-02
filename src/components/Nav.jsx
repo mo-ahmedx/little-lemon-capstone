@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Logo from "../assets/Logo.svg";
 import "../index.css";
-
+import OpenMenu from '../assets/menu-svgrepo-com (1).svg';
+import ClosedMenu from '../assets/cross-svgrepo-com (3).svg';
 //Navs as data
 
 const NavLinks = [
@@ -12,6 +14,7 @@ const NavLinks = [
   { id: "login", label: "Login" },
 ];
 export default function Nav() {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const handleNavClick = (e, id) => {
       e.preventDefault();
       const el = document.getElementById(id);
@@ -28,6 +31,7 @@ export default function Nav() {
       });
   }
   return (
+    <>
     <nav>
       <img src={Logo} alt="Little Lemon Logo" />
       <ul>
@@ -41,6 +45,20 @@ export default function Nav() {
           </li>
         ))}
       </ul>
+      <img className="humburger-menu" src={isOpenMenu? ClosedMenu : OpenMenu} alt="Humburger Menu" onClick={() => setIsOpenMenu(!isOpenMenu)} />
     </nav>
+
+    {isOpenMenu && 
+      <>
+        <div className="mobile-nav">
+          {NavLinks.map(n => (
+            <li key={n.id}>
+              <a href={`#${n.id}`} onClick={(e) => handleNavClick(e, n.id)}>{n.label}</a>
+            </li>
+          ))}
+        </div>
+      </>
+    }
+    </>
   );
 }

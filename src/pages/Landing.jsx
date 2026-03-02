@@ -1,0 +1,16 @@
+import "../index.css";
+import Hero from '../components/Hero.jsx';
+import Special from '../components/Special.jsx';
+import Testimonial from "../components/Testimonial.jsx";
+import About from "../components/About.jsx";
+// import Footer '../components/Footer.jsx';
+export default function Landing(){
+    return (
+        <>
+        <Hero />
+        <Special />
+        <Testimonial />
+        <About />
+        </>
+    )
+}

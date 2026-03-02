@@ -16,7 +16,7 @@ export default function Hero() {
               </p>
               <Button text = "Reserve Table" linkTo = '#reservation' />
             </div>
-            <div className="hero-img">
+            <div className="hero-img-container">
               <img
                 className="hero-img"
                 src={Food}
