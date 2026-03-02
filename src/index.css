@@ -1,18 +1,373 @@
-/* nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+    position: sticky;
+    z-index: 50;
+    top: 0;
+    background-color: white;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  box-shadow: yellowgreen;
 }
 nav > ul {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav > ul > li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 nav > ul > li > a {
+  text-decoration: none;
+}
 
-} */
+nav > ul > li > a:hover {
+  color: brown;
+}
 
-@import "tailwindcss";
+.section {
+  /* use min-height so content can grow on small screens */
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section > h2 {
+  font-weight: bold;
+  font-size: x-large;
+  
+}
+.hero-img {
+  /* responsive image: max width with automatic height */
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+.hero-img-container {
+  max-width: 400px;
+  width: 100%;
+}
+.hero-flexbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+}
+.hero-text {
+    position: relative;
+    
+}
+.hero-text > h1{
+    font-size:large;
+    color: #F4CE14;
+    margin-bottom: 6px;
+}
+.hero-text > h3{
+    font-size: medium;
+    color: white;
+    margin-bottom: 6px;
+}
+.hero-text > p {
+    color: white;
+}
+.hero-bg {
+  background-color: #495E57;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  /* allow the section to size with content instead of fixed height */
+}
+
+.cta-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 145px;
+    height: 45px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #F4CE14;
+}
+
+.cta-button:hover {
+    background-color: #F4CE14;
+    scale: 105%;
+}
+
+.humburger-menu {
+  display: none;
+}
+
+
+
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: start;
+  align-items: center;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.6); /* dark transparent */
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.mobile-nav > li {
+  list-style-type: none;
+  margin-top: 20px;
+}
+.mobile-nav > li > a {
+  color: white;
+}
+
+.f-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 305px;
+  max-height: 480px;
+  background-color: #D9D9D9;
+  border-radius: 24px;
+}
+
+.f-card-container > .title-and-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+
+.f-card-container > .title-and-price > .price {
+  color: #FF1414;
+}
+
+.f-card-container > .f-description {
+  margin-left: 5px;
+}
+
+.f-card-container > .f-img {
+  max-width: 305px;
+  max-height: 198px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.order-delivery {
+  display: flex;
+  align-items:center;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+.scooter {
+  width: 36px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 30px 10px 30px;
+}
+
+.row > h2 {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.food-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.testi-section {
+  background: #555;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testi-section h2 {
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.userCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.rating {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.userInfo img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 6px; /* Figma uses square-ish, not circle */
+  object-fit: cover;
+}
+
+.comment {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;      /* 🔥 THIS centers everything */
+  padding: 0 40px;
+}
+
+.about-section {
+  padding: 80px 0;
+}
+
+.container > h2 {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.about-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-flex > .text {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.text > h3 {
+  font-size: x-large;
+}
+
+.text h4 {
+
+}
+
+.text p {
+  line-height: 1.6;
+}
+
+.about-flex > .images {
+  width: 40%;
+  position: relative;
+  height: 460px;
+}
+
+.about-flex > .images img {
+  width: 324px;
+  height: 374px;
+  border-radius: 16px;
+}
+
+.first-img {
+  position: absolute;
+  z-index: 3;
+}
+
+.second-img {
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  left: 162px;
+}
+
+@media (max-width: 768px) {
+  /* CSS styles for mobile devices go here */
+  .hero-flexbox {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-bg {
+    width:100%;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  /* hide the desktop nav list on small screens and show the hamburger */
+  nav > ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .humburger-menu {
+    display: inline;
+    width: 40px;
+
+  }
+
+  .food-container {
+    grid-template-columns: 1fr;
+  }
+
+    .testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-flex {
+    flex-direction: column;
+  }
+
+  .about-flex > .images {
+  width: 40%;
+  height: 460px;
+}
+
+
+}
