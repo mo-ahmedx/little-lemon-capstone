@@ -32,7 +32,7 @@ export default function Nav() {
   }
   return (
     <>
-    <nav>
+    <nav className="shadow-2xl">
       <img src={Logo} alt="Little Lemon Logo" />
       <ul>
         {NavLinks.map(n => (
