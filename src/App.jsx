@@ -5,6 +5,7 @@ import "./index.css";
 
 import Landing from "./pages/Landing.jsx";
 import Header from "./components/Header.jsx";
+import Menu from './pages/Menu.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigate to={"/landing"} />} />
       <Route path="/landing" element={<Landing />} />
+      <Route path="/menu" element={<Menu />} />
     </Routes>
     </>
   );
