@@ -3,7 +3,7 @@ import Hero from '../components/Hero.jsx';
 import Special from '../components/Special.jsx';
 import Testimonial from "../components/Testimonial.jsx";
 import About from "../components/About.jsx";
-// import Footer '../components/Footer.jsx';
+import Footer from '../components/Footer.jsx';
 export default function Landing(){
     return (
         <>
@@ -11,6 +11,7 @@ export default function Landing(){
         <Special />
         <Testimonial />
         <About />
+        <Footer />
         </>
     )
 }
