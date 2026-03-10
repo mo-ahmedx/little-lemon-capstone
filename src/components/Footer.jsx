@@ -5,7 +5,7 @@ export default function Footer(){
         <footer>
             <img src={FooterImg} alt="Restaurant Footer images" />
             <ul>
-                <li>Navigation Links</li>
+                <li className='head'>Navigation Links</li>
                 <li><a href="">home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Menu</a></li>
@@ -14,13 +14,13 @@ export default function Footer(){
                 <li><a href="">Login</a></li>
             </ul>
             <ul>
-                <li>Contacts</li>
+                <li className='head'>Contacts</li>
                 <li><a href="">Address</a></li>
                 <li><a href="">Phone number</a></li>
                 <li><a href="">Email</a></li>
             </ul>
             <ul>
-                <li>Social Media</li>
+                <li className='head'>Social Media</li>
                 <li><a href="">Facebook</a></li>
                 <li><a href="">Instagram</a></li>
                 <li><a href="">Tiktok</a></li>
