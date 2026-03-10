@@ -327,6 +327,37 @@ nav > ul > li > a:hover {
   left: 162px;
 }
 
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px;
+  gap: 24px;
+  background-color: #484848;
+}
+
+footer > img {
+    width: 180px;
+    height: 260px;
+    border-radius: 8px;
+}
+
+footer > ul > .head {
+  font-weight: bold;
+  font-size: larger;
+  color: #FFFFFF;
+}
+
+footer > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+footer > ul > li > a {
+  color: #FFFFFF;
+}
+
 @media (max-width: 768px) {
   /* CSS styles for mobile devices go here */
   .hero-flexbox {
@@ -387,6 +418,23 @@ nav > ul > li > a:hover {
     left: 0;
     margin-top: 100px;
     margin-left: 30px;
+  }
+
+  footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer > ul > li {
+    padding: 10px 0;
+  }
+
+  footer > img {
+    margin-bottom: 20px;
+    width:230px;
+    height: 330px;
   }
 
 
