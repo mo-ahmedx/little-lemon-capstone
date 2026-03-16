@@ -1,0 +1,35 @@
+[33mcommit 17ed56f618625296fe7d6530172c0f77035ca077[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mupdate[m[33m, [m[1;31morigin/update[m[33m)[m
+Author: mo-ahmedx <mohammedahmedk886@gmail.com>
+Date:   Thu Mar 5 06:20:26 2026 +0300
+
+    Added plain footer elements
+
+[33mcommit 4cb41e89dfd1dee5c8dc5e3702aa3dce1140837f[m
+Author: mo-ahmedx <mohammedahmedk886@gmail.com>
+Date:   Tue Mar 3 15:22:22 2026 +0300
+
+    Fixed irrespnsiveness in about section + removed margins in sections
+
+[33mcommit 399835b1462fc89323ab9ebb9d8a5206d5775a4a[m
+Author: mo-ahmedx <mohammedahmedk886@gmail.com>
+Date:   Mon Mar 2 10:06:24 2026 +0300
+
+    unfinihsed Landing Page
+
+[33mcommit d7a1162548b297687713c77ed26fd8cf8570b74a[m
+Author: mo-ahmedx <mohammedahmedk886@gmail.com>
+Date:   Sat Feb 21 13:11:42 2026 +0300
+
+    Assets | Hero | Navbar |Unfished FoodTable
+
+[33mcommit a9a63c8b54034d6c407e56462eb3cbb40422db04[m
+Author: mo-ahmedx <mohammedahmedk886@gmail.com>
+Date:   Wed Feb 18 17:10:54 2026 +0300
+
+    Semantic Tag | OGP Tags | Component Preparation
+
+[33mcommit 40564a29b28d51761dc009762ec5c590fda5d2d3[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: mo-ahmedx <mohammedahmedk886@gmail.com>
+Date:   Mon Feb 16 07:51:40 2026 +0300
+
+    Project setup done ✅

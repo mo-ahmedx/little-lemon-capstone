@@ -6,6 +6,7 @@ import "./index.css";
 import Landing from "./pages/Landing.jsx";
 import Header from "./components/Header.jsx";
 import Menu from './pages/Menu.jsx';
+import BookingPage from "./pages/BookingPage.jsx";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigate to={"/landing"} />} />
       <Route path="/landing" element={<Landing />} />
-      <Route path="/menu" element={<Menu />} />
+      <Route path="/booking" element={<BookingPage />} />
     </Routes>
     </>
   );
