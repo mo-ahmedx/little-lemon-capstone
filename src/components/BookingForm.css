@@ -1,0 +1,55 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 90%;
+
+}
+
+.form > label {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.form > #submit{
+    width: 80%;
+    border-radius: 20px;
+}
+
+.reservation-header {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reservation-header > h2 {
+    position: absolute;
+    top: 40%;
+    /* left: 40%; */
+    font-weight:bold;
+    font-size:40px;
+    color: rgb(32, 31, 31);
+
+}
+.reservation-header > h4 {
+    position: absolute;
+    top: 60%;
+    /* left: 40%; */
+    font-weight:bold;
+    font-size:20px;
+    color: rgb(32, 31, 31);
+
+}
+
+.reservation-header > img {
+    border-radius: 8px;
+}
