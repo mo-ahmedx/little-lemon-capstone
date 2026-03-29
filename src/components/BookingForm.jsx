@@ -80,7 +80,7 @@ export default function BookingForm() {
           <option value="Birthday">Birthday</option>
           <option value="Anniversy">Anniversy</option>
         </select>
-        FIXME: i don't have colors for disabled and enabled state 
+        // FIXME: i don't have colors for disabled and enabled state 
         <button id="submit" type="submit" disabled={inValidForm()}>
           Make your reservation
         </button>
