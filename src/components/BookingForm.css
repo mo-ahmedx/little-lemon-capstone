@@ -4,17 +4,39 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
+    background-color: whitesmoke;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 2px solid #495E57;; 
 
 }
 
 input, select {
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid yellowgreen;
     width: 90%;
 
 }
 
+.date-icon {
+  padding-left: 25px;
+  background: url("../assets/date-calendar-schedule-event-appointment-svgrepo-com.svg") no-repeat left;
+  background-size: 20px;
+}
+.time-icon {
+  padding-left: 25px;
+  background: url("../assets/clock-three-svgrepo-com.svg") no-repeat left;
+  background-size: 20px;
+}
+.gift-icon {
+  padding-left: 25px;
+  background: url("../assets/gift-svgrepo-com.svg") no-repeat left;
+  background-size: 20px;
+}
 .form > label {
     margin-top: 10px;
     margin-left: 10px;
