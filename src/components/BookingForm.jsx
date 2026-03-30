@@ -1,24 +1,36 @@
-import { useState } from "react";
 import "./BookingForm.css";
 import Restaurant from "../assets/restaurant.jpg";
-export default function BookingForm() {
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [guests, setGuests] = useState(1);
-  const [occasion, setOccasion] = useState("");
+export default function BookingForm({
+  date,
+  setDate,
+  time,
+  setTime,
+  guests,
+  setGuests,
+  occasion,
+  setOccasion,
+  availableTimes,
+  dispatch,
+}) {
 
+  const handleDateChange = (e) => {
+    const newDate = e.target.value;
+    setDate(newDate);
+
+    dispatch({type: "UPDATE_TIMES", payload: newDate})
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(
+      `Form Submitted with : ${date}, ${time}, ${guests}, ${occasion}`,
+    );
     setDate("");
     setTime("");
     setOccasion("");
     setGuests("");
-    console.log("Form Submitted!");
   };
 
-  const inValidForm = () => {
-    return !date || !time || !occasion || guests < 1;
-  };
+  const inValidForm = !date || !time || !occasion || guests < 1;
 
   return (
     <>
@@ -34,7 +46,7 @@ export default function BookingForm() {
           id="res-date"
           className="date-icon"
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={handleDateChange}
           required
         />
 
@@ -46,12 +58,9 @@ export default function BookingForm() {
           onChange={(e) => setTime(e.target.value)}
           required
         >
-          <option value="17:00">17:00</option>
-          <option value="18:00">18:00</option>
-          <option value="19:00">19:00</option>
-          <option value="20:00">20:00</option>
-          <option value="21:00">21:00</option>
-          <option value="22:00">22:00</option>
+          {availableTimes.map((t) =>(
+            <option key={t} value={t}>{t}</option>
+          ))}
         </select>
 
         <label htmlFor="guests">Number of guests</label>
@@ -77,11 +86,12 @@ export default function BookingForm() {
           onChange={(e) => setOccasion(e.target.value)}
           required
         >
+          <option value="" disabled hidden>Select an occasion</option>
           <option value="Birthday">Birthday</option>
           <option value="Anniversy">Anniversy</option>
         </select>
         {/* FIXME: i don't have colors for disabled and enabled state  */}
-        <button id="submit" type="submit" disabled={inValidForm()}>
+        <button id="submit" type="submit" disabled={inValidForm} aria-disabled={inValidForm}>
           Make your reservation
         </button>
       </form>
