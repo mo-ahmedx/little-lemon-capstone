@@ -7,6 +7,7 @@ import Landing from "./pages/Landing.jsx";
 import Header from "./components/Header.jsx";
 import Menu from './pages/Menu.jsx';
 import BookingPage from "./pages/BookingPage.jsx";
+import ConfirmedBooking from "./pages/ConfirmedBooking.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<Navigate to={"/landing"} />} />
       <Route path="/landing" element={<Landing />} />
       <Route path="/booking" element={<BookingPage />} />
+      <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
     </Routes>
     </>
   );

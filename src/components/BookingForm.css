@@ -75,3 +75,24 @@ input, select, button {
 .reservation-header > img {
     border-radius: 8px;
 }
+
+/* Enabled State */
+#submit {
+  background-color: #F4CE14; /* Little Lemon Yellow */
+  color: #495E57; /* Little Lemon Dark Green */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#submit:hover {
+  background-color: #edc300;
+}
+
+/* Disabled State */
+#submit:disabled {
+  background-color: #EDEFEE; /* Light Gray */
+  color: #888888;
+  cursor: not-allowed;
+  border: 1px solid #CCCCCC;
+  opacity: 0.7;
+}
