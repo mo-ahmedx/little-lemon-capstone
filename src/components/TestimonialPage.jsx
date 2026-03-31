@@ -1,4 +1,4 @@
-import TestimonialCard from "./TestimonialCard";
+import TestimonialCard from "./TestimonialCard.jsx";
 import CustomerOne from '../assets/CustomerOne.jpg';
 import CustomerTwo from '../assets/pleased-handsome-male-customer-show-thumb-up-approval.jpg';
 import CustomerThree from '../assets/proud-you-did-great-portrait-happy-impressed-attractive-supportive-armenian-girl-wearing-orange-tshirt-show-thumbsup-approval-agree-gesture-liking-awesome-prom-outfit-friend-bought-smiling.jpg';
