@@ -35,7 +35,7 @@ export default function BookingForm({
       setDate("");
       setTime("");
       setOccasion("");
-      setGuests("");
+      setGuests(1);
 
       alert("You successfully reserved a table!");
       navigate("/confirmed-booking");
@@ -54,8 +54,8 @@ export default function BookingForm({
         <h2>Reservation</h2>
         <h4>Find a table for any occasion</h4>
       </div>
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="res-date">Choose date</label>
+      <form className="form" onSubmit={handleSubmit} aria-label="Booking form">
+        <label htmlFor="res-date" aria-label="Choose date">Choose date</label>
         <input
           type="date"
           id="res-date"
@@ -63,16 +63,19 @@ export default function BookingForm({
           value={date}
           onChange={handleDateChange}
           required
+          aria-required = {true}
         />
 
-        <label htmlFor="res-time">Choose time</label>
+        <label htmlFor="res-time" aria-label="Choose time">Choose time</label>
         <select
           id="res-time"
           className="time-icon"
           value={time}
           onChange={(e) => setTime(e.target.value)}
           required
+          aria-required = {true}
         >
+          <option value="" hidden disabled aria-label="Select time">Select time</option>
           {availableTimes.map((t) => (
             <option key={t} value={t}>
               {t}
@@ -80,7 +83,7 @@ export default function BookingForm({
           ))}
         </select>
 
-        <label htmlFor="guests">Number of guests</label>
+        <label htmlFor="guests" aria-label="Number of guests">Number of guests</label>
         <input
           type="number"
           placeholder="1"
@@ -90,9 +93,10 @@ export default function BookingForm({
           value={guests}
           onChange={(e) => setGuests(e.target.value)}
           required
+          aria-required = {true}
         />
 
-        <label htmlFor="occasion" id="occasion">
+        <label htmlFor="occasion" id="occasion" aria-label="Choose occasions">
           Occasion
         </label>
         <select
@@ -102,20 +106,22 @@ export default function BookingForm({
           value={occasion}
           onChange={(e) => setOccasion(e.target.value)}
           required
+          aria-required = {true}
         >
           <option value="" disabled hidden>
             Select an occasion
           </option>
           <option value="Birthday">Birthday</option>
-          <option value="Anniversy">Anniversy</option>
+          <option value="Anniversary">Anniversary</option>
         </select>
-        {/* FIXME: i don't have colors for disabled and enabled state  */}
+        
         <button
           id="submit"
           type="submit"
           role="button"
           disabled={inValidForm}
           aria-disabled={inValidForm}
+          aria-label="Submit your reservation"
         >
           Make your reservation
         </button>
