@@ -1,0 +1,77 @@
+/* ==================================================
+   CONFIRMATION PAGE STYLES
+   ================================================== */
+
+/* Container to center everything on the screen */
+.confirmation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Centers vertically in the viewport */
+    padding: 20px;
+}
+
+/* The Success Card */
+.confirmation-card {
+    text-align: center;
+    /* Brand Update: Using the official Light Gray */
+    background-color: #EDEFEE; 
+    padding: 40px;
+    /* Brand Update: Standardized to UI Kit's 16px rounding */
+    border-radius: 16px; 
+    border: 2px solid #495E57; /* Brand Primary Green */
+    max-width: 500px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.success-icon {
+    background-color: #495E57;
+    color: #F4CE14;
+    width: 60px;
+    height: 60px;
+    /* Keeps the circle shape, 16px doesn't apply to perfect circles */
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0 auto 20px auto;
+}
+
+.confirmation-card h1 {
+    color: #495E57;
+    /* Brand Update: Enforcing Markazi Text for headers */
+    font-family: 'Markazi Text', serif; 
+    font-size: 40px; /* UI Kit Display/Subtitle Size */
+    margin-bottom: 10px;
+}
+
+.confirmation-card p {
+    color: #333333; /* UI Kit Dark Gray for better contrast */
+    /* Brand Update: Body text uses Karla with 1.5 line height */
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Styled Link to look like your "Make Reservation" button */
+.home-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: #F4CE14;
+    color: #495E57;
+    text-decoration: none;
+    /* Brand Update: Match CTA styling */
+    font-family: 'Karla', sans-serif;
+    font-size: 18px; 
+    font-weight: bold;
+    border-radius: 16px; /* UI Kit rounding */
+    transition: 0.3s;
+}
+
+.home-button:hover {
+    background-color: #edc300;
+    transform: scale(1.05);
+}

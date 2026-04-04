@@ -49,6 +49,7 @@ export default function BookingForm({
 
   return (
     <>
+      <div className="res-container">
       <div className="reservation-header">
         <img src={Restaurant} alt="" />
         <h2>Reservation</h2>
@@ -126,6 +127,7 @@ export default function BookingForm({
           Make your reservation
         </button>
       </form>
+      </div>
     </>
   );
 }
