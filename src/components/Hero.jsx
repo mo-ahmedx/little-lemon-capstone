@@ -14,7 +14,7 @@ export default function Hero() {
                 We are a family owned <br />Mediterranean restaurant <br /> focused on
                 traditional recipes served with a modern twist.
               </p>
-              <Button text = "Reserve Table" linkTo = '#reservation' />
+              <Button text = "Reserve Table" linkTo = '/booking' />
             </div>
             <div className="hero-img-container">
               <img

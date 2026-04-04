@@ -1,25 +1,39 @@
+/* ==================================================
+   RESERVATION FORM STYLES
+   ================================================== */
+
 .form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
+    /* Brand Update: Swapped 'whitesmoke' for official Light Gray */
+    background-color: #EDEFEE; 
     margin-left: 10px;
     margin-right: 10px;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 20px; /* Increased slightly for better breathing room */
+    border-radius: 16px; /* UI Kit rounding */
     margin-top: 10px;
-    border: 2px solid #495E57;; 
-
+    border: 2px solid #495E57; 
 }
 
+/* Brand Update: Inputs need font explicitly declared to override browser defaults */
 input, select, button {
     padding: 10px;
-    border-radius: 10px;
-    border: 1px solid yellowgreen;
+    border-radius: 16px; /* UI Kit rounding */
+    /* Brand Update: Swapped 'yellowgreen' for professional brand green */
+    border: 1px solid #495E57; 
     width: 90%;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
 
+/* Focus states for accessibility and pro-feel */
+input:focus, select:focus {
+    outline: none;
+    border: 2px solid #F4CE14; /* Highlights in yellow when typing */
 }
 
 .date-icon {
@@ -37,43 +51,54 @@ input, select, button {
   background: url("../assets/gift-svgrepo-com.svg") no-repeat left;
   background-size: 20px;
 }
+
 .form > label {
     margin-top: 10px;
     margin-left: 10px;
+    /* Brand Update: Bold Karla for labels to match card titles */
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    color: #333333;
 }
 
-.form > #submit{
+.form > #submit {
     width: 80%;
-    border-radius: 20px;
+    border-radius: 16px; /* UI Kit rounding */
+    /* Brand Update: Ensure the button text matches the CTA guidelines */
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .reservation-header {
-    position:relative;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .reservation-header > h2 {
     position: absolute;
     top: 40%;
-    /* left: 40%; */
-    font-weight:bold;
-    font-size:40px;
-    color: rgb(32, 31, 31);
-
+    font-family: 'Markazi Text', serif; /* Enforce heading font */
+    font-weight: bold;
+    font-size: 40px;
+    color: #FFFFFF; /* Changed to white for image contrast */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Added shadow so it's readable over the image */
 }
+
 .reservation-header > h4 {
     position: absolute;
     top: 60%;
-    /* left: 40%; */
-    font-weight:bold;
-    font-size:20px;
-    color: rgb(32, 31, 31);
-
+    font-family: 'Karla', sans-serif; /* Enforce secondary font */
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .reservation-header > img {
-    border-radius: 8px;
+    border-radius: 16px; /* UI Kit rounding */
 }
 
 /* Enabled State */
@@ -95,4 +120,41 @@ input, select, button {
   cursor: not-allowed;
   border: 1px solid #CCCCCC;
   opacity: 0.7;
+}
+
+/* ==================================================
+   DESKTOP MEDIA QUERY (Split Layout)
+   ================================================== */
+@media (min-width: 769px) {
+  .res-container {
+    display: flex;
+    gap: 0;
+    justify-content: space-around;
+    align-items: stretch;
+    /* Fixed typo: added 'px' to margin */
+    margin: 40px auto; 
+    margin-top: 40px;
+    max-width: 1000px; /* Prevents it from getting too wide on huge screens */
+  }
+
+  .reservation-header, .form {
+    flex: 1; /* Forces them to take exactly 50% each */
+    width: 50%;
+    margin: 0; 
+  }
+
+  .reservation-header > img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    /* Brand Update: 16px on the left side to match UI Kit */
+    border-radius: 16px 0 0 16px; 
+    border: 2px solid #495E57; 
+  }
+
+  .form {
+    /* Brand Update: 16px on the right side to match UI Kit */
+    border-radius: 0 16px 16px 0; 
+    border-left: none; /* Merges the two halves visually */
+  }
 }
