@@ -1,18 +1,90 @@
-# React + Vite
+-----
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Little Lemon Restaurant 🍋
 
-Currently, two official plugins are available:
+### Meta Front-End Developer Capstone Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is the final capstone for the **Meta Front-End Developer Professional Certificate**. It features a fully responsive restaurant website with a functional table reservation system, built with **React** and styled according to the **Little Lemon** brand identity.
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+  * **Responsive Design:** Mobile-first approach transitioning to a professional split-screen desktop layout.
+  * **Booking System:** Validation-ready reservation form with date, time, and guest selection.
+  * **Brand Alignment:** Implemented using official Little Lemon UI Kit colors (`#495E57`, `#F4CE14`) and typography (`Markazi Text`, `Karla`).
+  * **SEO Optimized:** Semantic HTML and optimized meta tags for search engine visibility.
 
-Note: This will impact Vite dev & build performances.
+-----
 
-## Expanding the ESLint configuration
+## 🛠️ Project Setup Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these steps to get the project running locally on your machine.
+
+### Prerequisites
+
+  * **Node.js** (v16.0 or higher recommended)
+  * **npm** or **yarn**
+
+### 1\. Clone the Repository
+
+```bash
+git clone https://github.com/mo-ahmedx/little-lemon-capstone.git
+cd little-lemon-capstone
+```
+
+### 2\. Install Dependencies
+
+Run the following command to install all necessary packages (React, Tailwind CSS, etc.):
+
+```bash
+npm install
+```
+
+### 3\. Run the Development Server
+
+Start the local server to view the project in your browser:
+
+```bash
+npm run dev
+```
+
+Once the server starts, open [http://localhost:5173](https://www.google.com/search?q=http://localhost:5173) (or the port shown in your terminal) to view the site.
+
+### 4\. Run Tests
+
+```bash
+npx vitest
+```
+
+
+
+### 4\. Build for Production
+
+To create a minified, production-ready build in the `dist` folder:
+
+```bash
+npm run build
+```
+
+-----
+
+## 🎨 Tech Stack
+
+  * **Framework:** [React.js](https://reactjs.org/)
+  * **Build Tool:** [Vite](https://vitejs.dev/)
+  * **Styling:** CSS3 / [Tailwind CSS](https://tailwindcss.com/)
+  * **Fonts:** Markazi Text & Karla (via Google Fonts)
+
+## 📁 Folder Structure
+
+  * `src/components`: Reusable UI components (Nav, Header, BookingForm).
+  * `src/assets`: Images, SVGs, and brand logos.
+  * `src/pages`: Main page views (Home, Booking Page, Confirmation).
+  * `public`: Static assets like Open Graph preview images.
+
+-----
+
+## 📝 License
+
+This project was created as part of the Meta Front-End Developer Course. All brand assets belong to Meta/Coursera.
+
+-----
