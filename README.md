@@ -82,9 +82,3 @@ npm run build
   * `public`: Static assets like Open Graph preview images.
 
 -----
-
-## 📝 License
-
-This project was created as part of the Meta Front-End Developer Course. All brand assets belong to Meta/Coursera.
-
------
